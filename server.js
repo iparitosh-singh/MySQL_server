@@ -12,8 +12,6 @@ app.use(cors({orgin: (origin, callback) => callback(null, true), credentials: tr
 
 const port = process.env.NODE_ENV == 'production' ? (process.env.PORT || 80): 4000
 
-
-
 app.get('/', (_, res) =>{
     res.send("<h1>Hello World</h1>")
 })
@@ -21,4 +19,3 @@ app.get('/', (_, res) =>{
 app.listen(port, () => {
     console.log(`Sever listening to port ${port}`)
 })
-
